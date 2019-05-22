@@ -30,6 +30,8 @@
                         });
                     })
                     .then(_ => {
+                        var x = document.getElementById('bb8-connect');
+                        x.play();
                         // Connection is done, we show the controls
                         stepConnect.style.display = "none";
                         stepControl.style.display = "flex";

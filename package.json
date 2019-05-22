@@ -1,6 +1,6 @@
 {
-  "author": "JefBinomed",
-  "name": "Ollie-WebBluetooth",
+  "author": "Brendan Hennessy",
+  "name": "BB8-WebBluetooth",
   "version": "1.0.0",
   "dependencies": {
     "nipplejs": "^0.6.5"
