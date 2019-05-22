@@ -1,16 +1,14 @@
-# ollie-webbluetooth
-Simple application to control the Sphero Ollie with web bluetooth
+# BB8: Web Bluetooth
+Simple application to control the Sphero BB8 with Web Bluetooth
 
 # Demo
 
-You can test the application here : https://jef.binomed.fr/sphero_ollie-web-bluetooth/
+You can test the application here. https://jef.binomed.fr/sphero_ollie-web-bluetooth/
 
 # What you can do ?
 
 You can : 
-* Move the Ollie
+* Move the BB8
 * Change the light
 * Do some tricks
-
-What's comming next : 
 * Control with a "circle interface" instead of buttons
