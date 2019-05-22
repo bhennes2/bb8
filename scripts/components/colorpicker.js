@@ -12,8 +12,8 @@ class ColorPicker {
 
     _load() {
         
-        this.canvas.width = 150 * devicePixelRatio;
-        this.canvas.height = 150 * devicePixelRatio;
+        this.canvas.width = 320 * devicePixelRatio;
+        this.canvas.height = 320 * devicePixelRatio;
         this.canvas.style.width = "320px";
         this.canvas.style.height = "320px";
         this.canvas.addEventListener('click', this._calculateRgb.bind(this));
@@ -24,8 +24,8 @@ class ColorPicker {
 
     _calculateRgb(evt) {
         // Refresh canvas in case user zooms and devicePixelRatio changes.
-        this.canvas.width = 150 * devicePixelRatio;
-        this.canvas.height = 150 * devicePixelRatio;
+        this.canvas.width = 320 * devicePixelRatio;
+        this.canvas.height = 320 * devicePixelRatio;
         this.context.drawImage(this.img, 0, 0, this.canvas.width, this.canvas.height);
 
         let rect = this.canvas.getBoundingClientRect();

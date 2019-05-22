@@ -38,7 +38,7 @@ class Joystick {
             let angle = data.angle.degree;
             if (power != this.lastPower
             || angle != this.lastAngle) {
-                this.lastPower = power;   
+                this.lastPower = power;
                 this.lastAngle = angle;
                 this.callback({
                     angle : Math.abs(360 - ((this.lastAngle + 270) % 360)),
