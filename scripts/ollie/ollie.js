@@ -43,12 +43,13 @@ class Ollie {
     */
     request() {
         let options = {
-            "filters": [{
-                "services": [this.config.radioService()]
-            },{
-                "services": [this.config.robotService()]
-            }],
-            "optionalServices": [this.config.radioService(), this.config.robotService()]
+            acceptAllDevices: true
+            // "filters": [{
+            //     "services": [this.config.radioService()]
+            // },{
+            //     "services": [this.config.robotService()]
+            // }],
+            // "optionalServices": [this.config.radioService(), this.config.robotService()]
         };        
         return navigator.bluetooth.requestDevice(options)
             .then(device => {
@@ -89,8 +90,8 @@ class Ollie {
                     this.config.wakeUpCPUCharateristic(),
                     new Uint8Array([0x01]))
             })
-            .then(()=>{                
-                console.log('Wake CPU write done.');             
+            .then(()=>{
+                console.log('Wake CPU write done.');
                 //Set rgbLed to 0
                 let color = 0x01;
                 color &= 0xFF;

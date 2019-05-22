@@ -14,8 +14,8 @@ class ColorPicker {
         
         this.canvas.width = 150 * devicePixelRatio;
         this.canvas.height = 150 * devicePixelRatio;
-        this.canvas.style.width = "150px";
-        this.canvas.style.height = "150px";
+        this.canvas.style.width = "320px";
+        this.canvas.style.height = "320px";
         this.canvas.addEventListener('click', this._calculateRgb.bind(this));
 
         this.context.drawImage(this.img, 0, 0, this.canvas.width, this.canvas.height);

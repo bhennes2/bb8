@@ -68,6 +68,7 @@ canvas{
         .part-joystick{
             display: flex;
             justify-content: center;
+            margin-top: 50px;
         }
         
         h2{
@@ -81,7 +82,7 @@ canvas{
 }
 
 .demo-card-wide.mdl-card {
-  width: 512px;
+  min-width: 300px;
 }
 #noBluetooth .demo-card-wide > .mdl-card__title {
   color: #fff;
@@ -131,3 +132,7 @@ $joystick-size:200px;
  } 
  
  @import "override-mdl.scss";
+
+ #connectBtn{
+     width: 100%;
+ }

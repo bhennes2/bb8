@@ -8,7 +8,7 @@ class Joystick {
                 left: '50%',
                 top: '50%'
             },
-            size: 200,
+            size: 300,
             color: '#c10435'
         });
         this.callback = callback;
@@ -32,8 +32,8 @@ class Joystick {
         this.lastAngle = 0;
     }
 
-    _move(evt, data) {        
-        if (data.angle) {            
+    _move(evt, data) {
+        if (data.angle) {
             let power = Math.round((data.distance / 100) * 100);
             let angle = data.angle.degree;
             if (power != this.lastPower
