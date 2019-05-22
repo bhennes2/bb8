@@ -3,7 +3,7 @@ Simple application to control the Sphero BB8 with Web Bluetooth
 
 # Demo
 
-You can test the application [here](https://bb8.launchpadlab.com/)
+You can test the application [here](https://bb8.launchpadlab.com/).
 
 # What you can do ?
 
