@@ -34,7 +34,7 @@ gulp.task('sass',function(){
 
 gulp.task('browserify',function(){
   return browserify(['./scripts/app.js'], {debug:true})
-    .bundle()    
+    .bundle()
     .on('error', function(err){
       console.log(err);
       this.emit('end');
