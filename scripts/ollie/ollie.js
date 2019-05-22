@@ -43,13 +43,13 @@ class Ollie {
     */
     request() {
         let options = {
-            acceptAllDevices: true
-            // "filters": [{
-            //     "services": [this.config.radioService()]
-            // },{
-            //     "services": [this.config.robotService()]
-            // }],
-            // "optionalServices": [this.config.radioService(), this.config.robotService()]
+            // acceptAllDevices: true
+            "filters": [{
+                "services": [this.config.radioService()]
+            },{
+                "services": [this.config.robotService()]
+            }],
+            "optionalServices": [this.config.radioService(), this.config.robotService()]
         };        
         return navigator.bluetooth.requestDevice(options)
             .then(device => {
@@ -209,15 +209,15 @@ class Ollie {
                     let data = new Uint8Array([lmode, lpower, rmode, rpower]);
 
                     this._sendCommand(did, cid, data)
-                    .then(_ => {     
-                        console.log('second command sucess');                   
+                    .then(_ => {
+                        console.log('second command sucess');
                         resolve();
                     })
                     .catch((error)=>{
                         console.error('second command fail',error);
                         reject(error);
                     }); 
-                }, 2000);    
+                }, 2000);
             });
                 
         })
@@ -282,12 +282,9 @@ class Ollie {
         array.set(packets, 0);
         array.set(data, packets.byteLength);
         array.set(checksum, packets.byteLength + data.byteLength);
-        return this._writeCharacteristic(this.config.robotService(), this.config.controlCharacteristic(), array);          
+        return this._writeCharacteristic(this.config.robotService(), this.config.controlCharacteristic(), array);
     }
-
-
-  
-
+    
     _writeCharacteristic(serviceUID, characteristicUID, value) {
         return this.device.gatt.getPrimaryService(serviceUID)
             .then(service => service.getCharacteristic(characteristicUID))
